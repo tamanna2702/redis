@@ -1,0 +1,3 @@
+redis:
+  hostname: redis
+  port: 6379

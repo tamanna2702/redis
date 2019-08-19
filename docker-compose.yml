@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+
+  redis-docker-service:
+    image:  ladbrokescoral/redis-docker:development
+    container_name: "redis-docker"
+    ports:
+      - "8080:8080"
+    build:
+      dockerfile: Dockerfile
+      context:  .
+    depends_on:
+      - redis
+
+  redis:
+    image: "redis:alpine"
+    ports:
+     - "6379:6379"

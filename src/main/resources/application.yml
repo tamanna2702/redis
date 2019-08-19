@@ -1,0 +1,3 @@
+redis:
+  hostname: cluster-example.8k8kok.0001.use1.cache.amazonaws.com
+  port: 6379
