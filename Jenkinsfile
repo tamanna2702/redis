@@ -1,6 +1,8 @@
 pipeline {
 
-    agent any
+    agent {
+        label "simple"
+    }
 
     tools {
 
@@ -18,6 +20,13 @@ pipeline {
             }
         }
         stage ('Testing Stage') {
+
+            agent {
+                docker {
+                  image "318578389648.dkr.ecr.eu-west-2.amazonaws.com/base-images/maven:latest"
+                  label "simple"
+                }
+            }
 
             steps {
 
