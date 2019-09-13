@@ -10,6 +10,12 @@ pipeline {
 
     stages {
 
+        stage("Login to ECR"){
+          steps {
+            sh "`aws ecr get-login --no-include-email --region eu-west-2`"
+          }
+        }
+
         stage ("Build") {
 
             steps {
