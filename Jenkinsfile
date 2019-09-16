@@ -2,11 +2,6 @@ pipeline {
 
     agent any
 
-    tools {
-
-        jdk "Jdk-1.8"
-    }
-
     stages {
 
         stage("Login to ECR"){
